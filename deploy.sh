@@ -4,7 +4,7 @@ if [ -d "$HOME/.vim/bundle/" ];then
 else
     echo "cant find the vundle! fetch it on github now!"
     git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
-    rm $HOME/.vimrc
+    rm -f $HOME/.vimrc
     ln -s $PWD/vimrc $HOME/.vimrc
     echo "already create symoble link to vimrc, you need to opren vim and run :BundleInstall first, then go back to run this shell again!"
     exit 1
