@@ -16,7 +16,7 @@ set ignorecase
 "在输入括号时光标会短暂地跳到与之相匹配的括号处，不影响输入  
 set showmatch 
 set matchtime=5
-filetype plugin indent on 
+filetype plugin indent on
 map <F5> <Esc>gg=G<C-o> 
 map <F6> <Esc>:tabedit<Enter>
 map \p <Esc>"*p<Enter>k$a
@@ -101,6 +101,7 @@ Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'skammer/vim-css-color'
+Bundle 'scrooloose/nerdcommenter'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
@@ -153,3 +154,4 @@ map <S-F4> <Esc>:FufBuffer<CR>
 "cp ~/.vimrc ~/StudyNotes/vimrc.txt
 
 colorscheme blackboard
+filetype plugin on
