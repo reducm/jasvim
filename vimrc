@@ -102,6 +102,7 @@ Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'flazz/vim-colorschemes'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
