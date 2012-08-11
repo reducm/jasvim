@@ -103,6 +103,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'mileszs/ack.vim'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
@@ -127,7 +128,7 @@ filetype plugin indent on     " required!
 "Bundle 'snipMate'
 
 """"""""""""""""""bundle end""""""""""""""""""""
-
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"  "ack用的 
 
 " F4和shift+F4调用FuzzyFinder命令行菜单"
 "
