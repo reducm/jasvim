@@ -51,10 +51,12 @@ imap <A-Backspace> <Esc>ldbi
 imap <A-b> <Esc>bi
 imap <A-f> <Esc>lwi
 "nerdtree
-imap <F3> <Esc>:NERDTree<Enter>
-map <F3> <Esc>:NERDTree<Enter>
-map <S-F3> <Esc>:NERDTreeClose<Enter>
-imap <S-F3> <Esc>:NERDTreeClose<Enter>
+imap <F3> <Esc>:NERDTreeToggle<Enter>
+map <F3> <Esc>:NERDTreeToggle<Enter>
+""""
+""tagbar
+nmap <F8> :TagbarToggle<CR>
+imap <F8> :TagbarToggle<CR>
 """"
 set fileencodings=utf-8,cp932
 map <F1> <Esc>:w<Enter>
@@ -104,6 +106,7 @@ Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
+Bundle 'majutsushi/tagbar'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
