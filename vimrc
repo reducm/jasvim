@@ -1,4 +1,7 @@
 set guifont=Monospace\ 14
+autocmd! bufwritepost .vimrc source ~/.vimrc
+set showtabline=2
+set guitablabel=%t
 set ignorecase smartcase
 set wrap
 set whichwrap+=l,h
@@ -85,6 +88,16 @@ imap <A-6> <%%><Esc>hi
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 
+if has("gui_macvim")
+    set guifont=Menlo\ Regular:h18
+    "let macvim_skip_cmd_opt_movement=1
+    "let macvim_hig_shift_movement=1
+    vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+    map \p :call setreg("\"",system("pbpaste"))<CR>p
+endif
+
+
+
 """""""""""""""""bundle start"""""""""""""""""
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -97,7 +110,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
-Bundle 'kazandjiev/auto-pairs.git'
+Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
@@ -161,3 +174,4 @@ map <S-F4> <Esc>:FufBuffer<CR>
 
 colorscheme blackboard
 filetype plugin on
+
