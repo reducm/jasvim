@@ -167,8 +167,8 @@ let g:fuf_com_list=[':FufBuffer',':FufFile',':FufCoverageFile',':FufDir',
 	    \":FufDir \<C-r>=expand('%:p:~')[:-1-len(expand('%:p:~:t'))]\<CR>",
 	    \]       
 nnoremap <silent> <C-F4> :call fuf#givencmd#launch('', 0, '选择命令>', g:fuf_com_list)<CR>
-map <F4> <Esc>:FufFile<CR>
-map <S-F4> <Esc>:FufBuffer<CR>
+map <S-F4> <Esc>:FufFile<CR>
+map <F4> <Esc>:FufBuffer<CR>
 
 "cp ~/.vimrc ~/StudyNotes/vimrc.txt
 
