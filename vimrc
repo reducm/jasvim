@@ -1,4 +1,3 @@
-set guifont=Monospace\ 14
 autocmd! bufwritepost .vimrc source ~/.vimrc
 set showtabline=2
 set guitablabel=%t
@@ -46,7 +45,7 @@ imap <C-p> <Esc>ka
 imap <C-e> <Esc>$a
 imap <C-a> <Esc>0i
 imap <C-d> <Esc>lxi
-imap <C-k> <Esc>ddi
+imap <C-k> <Esc>ld$a
 imap <C-z> <Esc>ua
 imap <C-l> <Esc>zza
 imap <A-d> <Esc>ldwi
@@ -76,8 +75,8 @@ map H <Esc>gT
 map L <Esc>gt
 "快捷插入各种编程括号
 imap <A-1> -><Esc>a
-imap <A-2> []<Esc>i
-imap <A-3> {}<Esc>i
+imap <A-2> =><Space><Esc>i
+imap <A-3> <%%><Esc>hi
 imap <A-4> <><Esc>i
 imap <A-5> =><Space><Esc>i
 imap <A-s> #{}<Esc>i
@@ -89,14 +88,15 @@ imap <A-6> <%%><Esc>hi
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 
 if has("gui_macvim")
-    set guifont=Menlo\ Regular:h18
+    set guifont=Monaco:h18
+    set macmeta
     "let macvim_skip_cmd_opt_movement=1
     "let macvim_hig_shift_movement=1
     vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
     map \p :call setreg("\"",system("pbpaste"))<CR>p
+else
+    set guifont=Monospace\ 14
 endif
-
-
 
 """""""""""""""""bundle start"""""""""""""""""
 set nocompatible               " be iMproved
