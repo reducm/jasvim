@@ -94,6 +94,7 @@ if has("gui_macvim")
     "let macvim_hig_shift_movement=1
     vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
     map \p :call setreg("\"",system("pbpaste"))<CR>p
+    let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 else
     set guifont=Monospace\ 14
 endif
