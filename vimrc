@@ -39,9 +39,9 @@ imap <C-l> <Esc>zza
 imap <C-z> <Esc>ui
 imap <C-r> <Esc><C-r>i
 map <C-z> <Esc>u
-imap <C-n> <Esc>ja
+imap <C-n> <Down>
 imap <C-f> <Esc>la
-imap <C-p> <Esc>ka
+imap <C-p> <Up>
 imap <C-e> <Esc>$a
 imap <C-a> <Esc>0i
 imap <C-d> <Esc>lxi
@@ -50,7 +50,6 @@ imap <C-z> <Esc>ua
 imap <C-l> <Esc>zza
 imap <A-d> <Esc>ldwi
 imap <A-Backspace> <Esc>ldbi
-imap <A-b> <Esc>bi
 imap <A-f> <Esc>lwi
 "nerdtree
 imap <F3> <Esc>:NERDTreeToggle<Enter>
@@ -86,6 +85,7 @@ imap <A-6> <%%><Esc>hi
 """
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
+"au BufRead,BufNewFile *.s{c,a}ss set filetype=css
 
 if has("gui_macvim")
     set guifont=Monaco:h18
@@ -95,8 +95,17 @@ if has("gui_macvim")
     vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
     map \p :call setreg("\"",system("pbpaste"))<CR>p
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+    inoremap <C-e> <END>
+    inoremap <C-a> <HOME>
+    inoremap <C-f> <Right>
+    inoremap <C-b> <Left>
+    inoremap <M-f> <S-Right>
+    inoremap <M-b> <S-Left>
+    inoremap <M-n> <Down>
+    inoremap <M-p> <Up>
 else
     set guifont=Monospace\ 14
+    imap <A-b> <Esc>bi
 endif
 
 """""""""""""""""bundle start"""""""""""""""""
