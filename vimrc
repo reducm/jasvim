@@ -86,6 +86,7 @@ imap <A-6> <%%><Esc>hi
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
+au! FileType scss syntax cluster sassCssAttributes add=@cssColors
 
 if has("gui_macvim")
     set guifont=Monaco:h18
