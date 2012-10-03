@@ -8,8 +8,8 @@ set number
 syntax enable
 set winaltkeys=no
 set autoindent  
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 "set backspace=4
 set ruler  
 set showcmd
