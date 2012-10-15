@@ -96,6 +96,7 @@ if has("gui_macvim")
     vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
     map \p :call setreg("\"",system("pbpaste"))<CR>p
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+    
     inoremap <C-e> <END>
     inoremap <C-a> <HOME>
     inoremap <C-f> <Right>
