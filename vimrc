@@ -1,5 +1,4 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
-set t_Co=256
 set showtabline=2
 set guitablabel=%t
 set ignorecase smartcase
@@ -135,14 +134,14 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'tpope/vim-markdown'
+""Bundle 'tpope/vim-markdown'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular' 
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'oguzbilgic/sexy-railscasts-theme'
 Bundle 'sickill/vim-monokai'
 Bundle 'mattn/zencoding-vim'
@@ -225,8 +224,14 @@ let g:user_zen_settings = {
 
 "let g:sparkupNextMapping =
 """end_sparkup
-colorscheme Monokai
+
+if has("gui_running")
+else
+  set t_Co=16
+endif
+
 filetype plugin on
+colorscheme Monokai
 
 
 
