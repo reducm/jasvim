@@ -89,7 +89,7 @@ autocmd BufNewFile,BufRead *.scss set filetype=sass
 au! FileType scss syntax cluster sassCssAttributes add=@cssColors
 
 if has("gui_macvim")
-    set guifont=Monaco:h18
+    set guifont=Monaco:h15
     set macmeta
     "let macvim_skip_cmd_opt_movement=1
     "let macvim_hig_shift_movement=1
@@ -102,9 +102,10 @@ if has("gui_macvim")
     inoremap <C-f> <Right>
     inoremap <C-b> <Left>
     inoremap <M-f> <S-Right>
-    inoremap <M-b> <S-Left>
+    inoremap <M-b> <Esc>bi
     inoremap <M-n> <Down>
     inoremap <M-p> <Up>
+    inoremap <A-b> <Esc>bi
 else
     set guifont=Monospace\ 14
     imap <A-b> <Esc>bi
@@ -127,12 +128,19 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'tpope/vim-markdown'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular' 
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'oguzbilgic/sexy-railscasts-theme'
+Bundle 'sickill/vim-monokai'
+Bundle 'mattn/zencoding-vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+"Bundle 'rstacruz/sparkup'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
@@ -184,6 +192,34 @@ map <F4> <Esc>:FufBuffer<CR>
 
 "cp ~/.vimrc ~/StudyNotes/vimrc.txt
 
-colorscheme blackboard
+"colorscheme blackboard
+
+"zencoding
+let g:user_zen_settings = { 
+  \  'indentation' : '  ', 
+  \  'perl' : { 
+  \    'aliases' : { 
+  \      'req' : 'require ' 
+  \    }, 
+  \    'snippets' : { 
+  \      'use' : "use strict\nuse warnings\n\n", 
+  \      'warn' : "warn \"|\";", 
+  \    } 
+  \  } 
+  \} 
+ 
+  let g:user_zen_expandabbr_key = '<c-l>,'    "设置为ctrl+e展开
+ 
+  let g:use_zen_complete_tag = 1
+""" end_zencoding
+
+""sparkup
+"let g:sparkupExecuteMapping = '<C-e>'
+
+"let g:sparkupNextMapping =
+"""end_sparkup
+colorscheme Monokai
 filetype plugin on
+
+
 
