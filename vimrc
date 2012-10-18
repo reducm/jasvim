@@ -52,9 +52,11 @@ imap <A-d> <Esc>ldwi
 imap <A-Backspace> <Esc>ldbi
 imap <A-f> <Esc>lwi
 "nerdtree
-imap <F3> <Esc>:NERDTreeToggle<Enter>
-map <F3> <Esc>:NERDTreeToggle<Enter>
-""""
+imap <f3> <esc>:NERDTreeToggle<enter>
+map <f3> <esc>:NERDTreeToggle<enter>
+""""IndentGuidesToggle
+imap <f7> <esc>:IndentGuidesToggle<enter>
+map <f7> <esc>:IndentGuidesToggle<enter>
 ""tagbar
 nmap <F8> :TagbarToggle<CR>
 imap <F8> :TagbarToggle<CR>
