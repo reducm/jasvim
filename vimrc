@@ -1,4 +1,5 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
+set t_Co=256
 set showtabline=2
 set guitablabel=%t
 set ignorecase smartcase
@@ -16,6 +17,8 @@ set showcmd
 set incsearch
 set ignorecase 
 "在输入括号时光标会短暂地跳到与之相匹配的括号处，不影响输入  
+""set cursorcolumn  " 高亮光标列
+set cursorline    " 高亮光标行
 set showmatch 
 set matchtime=5
 filetype plugin indent on
@@ -25,6 +28,7 @@ map \p <Esc>"*p<Enter>k$a
 map \y <Esc>"*y<Enter>
 vmap \y "+y<Enter>
 vmap <C-c> "+y<Enter>
+map <C-c> <Esc>
 map <F1> <Esc>:w<Enter>
 map \w <Esc>:w<Enter>
 map <C-s> <Esc>:w<Enter>
@@ -110,7 +114,8 @@ if has("gui_macvim")
     inoremap <A-b> <Esc>bi
 else
     set guifont=Monospace\ 14
-    imap <A-b> <Esc>bi
+    inoremap <M-b> <Esc>bi
+    inoremap <A-b> <Esc>bi
 endif
 
 """""""""""""""""bundle start"""""""""""""""""
@@ -210,8 +215,8 @@ let g:user_zen_settings = {
   \  } 
   \} 
  
-  let g:user_zen_expandabbr_key = '<c-l>,'    "设置为ctrl+e展开
- 
+  ""let g:user_zen_expandabbr_key = '<c-l>,'    "设置为ctrl+e展开
+  let g:user_zen_leader_key = '<c-l>'
   let g:use_zen_complete_tag = 1
 """ end_zencoding
 
