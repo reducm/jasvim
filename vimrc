@@ -78,13 +78,6 @@ vmap <C-S-Tab> <Esc>gT
 map H <Esc>gT
 map L <Esc>gt
 "快捷插入各种编程括号
-imap <A-1> -><Esc>a
-imap <A-2> =><Space><Esc>i
-imap <A-3> <%%><Esc>hi
-imap <A-4> <><Esc>i
-imap <A-5> =><Space><Esc>i
-imap <A-s> #{}<Esc>i
-imap <A-6> <%%><Esc>hi
 """
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
@@ -226,15 +219,16 @@ let g:user_zen_settings = {
 if has("gui_running")
 else
   set t_Co=16
-  imap <leader>1 -><Esc>a
-  imap <leader>2 =><Space><Esc>i
-  imap <leader>3 <%%><Esc>hi
-  imap <leader>4 <><Esc>i
-  imap <leader>5 =><Space><Esc>i
-  imap <leader>s #{}<Esc>i
-  imap <leader>6 <%%><Esc>hi
-  let g:AutoPairsShortcutFastWrap='<C-g>'
 endif
+
+let g:AutoPairsShortcutFastWrap='<C-g>'
+imap <leader>1 -><Esc>a
+imap <leader>2 =><Space><Esc>i
+imap <leader>3 <%%><Esc>hi
+imap <leader>4 <><Esc>i
+imap <leader>5 =><Space><Esc>i
+imap <leader>s #{}<Esc>i
+imap <leader>6 <%%><Esc>hi
 
 filetype plugin on
 colorscheme Monokai
