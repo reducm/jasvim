@@ -79,6 +79,12 @@ map H <Esc>gT
 map L <Esc>gt
 "快捷插入各种编程括号
 """
+"命令行下也绑定emacs按键
+cnoremap <C-e> <END>
+cnoremap <C-a> <HOME>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
@@ -219,6 +225,18 @@ let g:user_zen_settings = {
 if has("gui_running")
 else
   set t_Co=16
+"设置shell下面的光标形状
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+"让tmux也支持光标形状
+  if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
 endif
 
 let g:AutoPairsShortcutFastWrap='<C-g>'
@@ -233,5 +251,5 @@ imap <leader>6 <%%><Esc>hi
 filetype plugin on
 colorscheme Monokai
 
-
+"改终端光标
 
