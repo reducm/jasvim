@@ -2,10 +2,16 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 set showtabline=2
 set guitablabel=%t
 set ignorecase smartcase
+set smarttab
 set wrap
 set whichwrap+=l,h
 set number
+set history=50
+set autoread
 syntax enable
+set incsearch
+set nobackup
+set copyindent
 set winaltkeys=no
 set autoindent  
 set shiftwidth=2
@@ -19,6 +25,7 @@ set ignorecase
 ""set cursorcolumn  " 高亮光标列
 set cursorline    " 高亮光标行
 set showmatch 
+set showmode
 set matchtime=5
 filetype plugin indent on
 map <F5> <Esc>gg=G<C-o> 
@@ -50,7 +57,6 @@ imap <C-a> <Esc>0i
 imap <C-d> <Esc>lxi
 imap <C-k> <Esc>ld$a
 imap <C-z> <Esc>ua
-imap <C-l> <Esc>zza
 imap <A-d> <Esc>ldwi
 imap <A-Backspace> <Esc>ldbi
 imap <A-f> <Esc>lwi
@@ -131,7 +137,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
-""Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-markdown'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular' 
@@ -250,6 +256,7 @@ imap <leader>6 <%%><Esc>hi
 
 filetype plugin on
 colorscheme Monokai
+syntax on
 
 "改终端光标
 
