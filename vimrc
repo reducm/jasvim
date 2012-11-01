@@ -1,5 +1,6 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
 set showtabline=2
+set laststatus=2
 set guitablabel=%t
 set ignorecase smartcase
 set smarttab
@@ -132,6 +133,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
@@ -245,6 +247,7 @@ else
   endif
 endif
 
+let g:Powerline_symbols = 'fancy'
 let g:AutoPairsShortcutFastWrap='<C-g>'
 imap <leader>1 -><Esc>a
 imap <leader>2 =><Space><Esc>i
