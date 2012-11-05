@@ -133,6 +133,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
@@ -152,6 +153,8 @@ Bundle 'sickill/vim-monokai'
 Bundle 'mattn/zencoding-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'rstacruz/sparkup'
+Bundle 'vim-scripts/ruby-matchit'
+Bundle 'vim-scripts/matchit.zip'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
@@ -238,13 +241,13 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "让tmux也支持光标形状
-  if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-  else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  endif
+  "if exists('$TMUX')
+    "let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    "let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  "else
+    "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  "endif
 endif
 
 let g:Powerline_symbols = 'fancy'
