@@ -155,6 +155,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'rstacruz/sparkup'
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/mru.vim'
+Bundle 'scrooloose/syntastic'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
