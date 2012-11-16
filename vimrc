@@ -153,6 +153,8 @@ Bundle 'sickill/vim-monokai'
 Bundle 'mattn/zencoding-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'rstacruz/sparkup'
+"让vim光标正常的插件
+Bundle 'sjl/vitality.vim'
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/mru.vim'
