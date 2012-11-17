@@ -92,6 +92,19 @@ cnoremap <C-a> <HOME>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 
+"代码自动fold设定
+set foldmethod=syntax
+set foldlevelstart=1
+
+let javaScript_fold=1         " JavaScript
+let coffeeScript_fold=1       
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
@@ -154,7 +167,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'rstacruz/sparkup'
 "让vim光标正常的插件
-Bundle 'sjl/vitality.vim'
+"Bundle 'sjl/vitality.vim'
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/mru.vim'
