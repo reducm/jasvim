@@ -97,7 +97,6 @@ set foldmethod=syntax
 set foldlevelstart=1
 
 let javaScript_fold=1         " JavaScript
-let coffeeScript_fold=1       
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
 let r_syntax_folding=1        " R

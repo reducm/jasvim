@@ -43,3 +43,4 @@ alias -g k9="killall -9"
 #PS1="%n: %~%#"
 #PS1="%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%~%{$reset_color%} #"
 # Customize to your needs...
+unsetopt correct_all
