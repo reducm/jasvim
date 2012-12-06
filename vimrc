@@ -145,19 +145,23 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
+"方便添加删除两端 括号 标签之类的
 Bundle 'tpope/vim-surround'
+"状态栏
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'tpope/vim-markdown'
+"Bundle 'tpope/vim-markdown'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
+"方便对齐 冒号啊，制作表格的情况
 Bundle 'godlygeek/tabular' 
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
+"提示代码calss method之类的
 Bundle 'majutsushi/tagbar'
 "Bundle 'tpope/vim-fugitive'
 Bundle 'oguzbilgic/sexy-railscasts-theme'

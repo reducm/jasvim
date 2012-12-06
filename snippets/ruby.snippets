@@ -444,6 +444,10 @@ snippet context
 	context "${1:'context'}" do
 	  ${2}
 	end
+snippet before
+	before(${1:'each or all'}) do
+	  ${2}
+	end
 snippet factory factory regular 
 	factory ${1:'symbo class'} do
 	  ${2}
@@ -452,6 +456,8 @@ snippet factory factory use classname
 	factory ${1:'symbo class'}, :class => ${2}  do
 	  ${3}
 	end
+
+
 #---------from jas -----------
 snippet enc
 	#encoding: UTF-8
