@@ -149,11 +149,14 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-surround'
 "状态栏
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
+"代码补完
+Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
@@ -279,6 +282,11 @@ imap <leader>4 <><Esc>i
 imap <leader>5 =><Space><Esc>i
 imap <leader>s #{}<Esc>i
 imap <leader>6 <%%><Esc>hi
+
+"neocomplcache
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
 
 filetype plugin on
 colorscheme Monokai
