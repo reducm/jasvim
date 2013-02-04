@@ -1,4 +1,5 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! BufReadPost Gemfile set ft=ruby
 set showtabline=2
 set laststatus=2
 set guitablabel=%t
