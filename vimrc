@@ -179,10 +179,14 @@ Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/mru.vim'
 Bundle 'scrooloose/syntastic'
+" javascript模板
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
 " vim-scripts repos
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
 Bundle 'L9'
+
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
