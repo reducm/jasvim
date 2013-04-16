@@ -26,6 +26,7 @@ set ignorecase
 "在输入括号时光标会短暂地跳到与之相匹配的括号处，不影响输入  
 ""set cursorcolumn  " 高亮光标列
 set cursorline    " 高亮光标行
+set cursorcolumn
 set showmatch 
 set showmode
 set matchtime=5
@@ -146,6 +147,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-unimpaired'
 "方便添加删除两端 括号 标签之类的
 Bundle 'tpope/vim-surround'
 "状态栏
@@ -168,7 +171,8 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
 "提示代码calss method之类的
 Bundle 'majutsushi/tagbar'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'oguzbilgic/sexy-railscasts-theme'
 Bundle 'sickill/vim-monokai'
 Bundle 'mattn/zencoding-vim'
