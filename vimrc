@@ -38,14 +38,12 @@ map \y <Esc>"*y<Enter>
 vmap \y "+y<Enter>
 vmap <C-c> "+y<Enter>
 map <C-c> <Esc>
-map <F1> <Esc>:w<Enter>
+map <F1> <Esc>:Gstatus<Enter>
 map \w <Esc>:w<Enter>
 map <C-s> <Esc>:w<Enter>
 imap <C-s> <Esc>:w<Enter>a
-map <F2> <Esc>:wall<Enter>
-imap <F1> <Esc>:w<Enter>a
+map <F2> <Esc>:Gcommit<Enter>
 imap <C-x><C-s> <Esc>:w<Enter>a
-imap <F2> <Esc>:wall<Enter>a
 imap <C-b> <Esc>i
 imap <C-c> <Esc>
 imap <C-l> <Esc>zza
@@ -74,7 +72,6 @@ nmap <F8> :TagbarToggle<CR>
 imap <F8> :TagbarToggle<CR>
 """"
 set fileencodings=utf-8,cp932
-map <F1> <Esc>:w<Enter>
 map <A-x> <Esc>:set filetype=
 map <S-F5> :source ~/.vimrc<Enter>
 "翻标签
