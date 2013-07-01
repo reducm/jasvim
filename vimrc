@@ -74,6 +74,7 @@ nmap <F8> :TagbarToggle<CR>
 imap <F8> :TagbarToggle<CR>
 """"
 set fileencodings=utf-8,cp932
+set encoding=utf-8
 map <F1> <Esc>:w<Enter>
 map <A-x> <Esc>:set filetype=
 map <S-F5> :source ~/.vimrc<Enter>

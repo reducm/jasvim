@@ -36,7 +36,7 @@ ZSH_THEME="agnoster"
 plugins=(rails3 ruby git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
+#source ~/.bashrc
 alias -g gac="git add . -v && git commit -m "
 alias -g gco="git checkout "
 alias -g beg='bundle exec guard'
