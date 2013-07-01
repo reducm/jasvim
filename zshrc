@@ -41,6 +41,8 @@ alias -g gac="git add . -v && git commit -m "
 alias -g gco="git checkout "
 alias -g beg='bundle exec guard'
 alias -g k9="killall -9"
+alias -g gvim='gvim -f'
+alias -g redis='redis-server /etc/redis.conf'
 #PS1="%n: %~%#"
 #PS1="%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%~%{$reset_color%} #"
 # Customize to your needs...
