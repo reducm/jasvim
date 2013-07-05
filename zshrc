@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="kolo"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="powerline"
-ZSH_THEME="agnoster"
+ZSH_THEME="kolo"
 
 
 # Example aliases
@@ -42,7 +42,9 @@ alias -g gco="git checkout "
 alias -g beg='bundle exec guard'
 alias -g k9="killall -9"
 alias -g gvim='gvim -f'
-alias -g redis='redis-server /etc/redis.conf'
+alias -g t='tmux'
+alias -g e='exit'
+alias redis='redis-server /etc/redis.conf'
 #PS1="%n: %~%#"
 #PS1="%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%~%{$reset_color%} #"
 # Customize to your needs...
