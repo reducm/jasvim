@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 alias -g gac="git add . -v && git commit -m "
 alias -g gco="git checkout "
 alias -g beg='bundle exec guard'
+alias -g bec='bundle exec '
 alias -g k9="killall -9"
 alias -g gvim='gvim -f'
 alias -g t='tmux'

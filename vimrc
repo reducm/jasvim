@@ -172,7 +172,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'oguzbilgic/sexy-railscasts-theme'
 Bundle 'sickill/vim-monokai'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'rstacruz/sparkup'
 "让vim光标正常的插件
@@ -296,7 +296,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
+let g:user_emmet_leader_key = '<c-l>'
 filetype plugin on
 colorscheme Monokai
 syntax on
