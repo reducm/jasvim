@@ -1,5 +1,7 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! BufReadPost Gemfile set ft=ruby
+au BufRead,BufNewFile *.rabl set filetype=ruby
+au BufRead,BufNewFile *.jbuilder set filetype=ruby
 set showtabline=2
 set laststatus=2
 set guitablabel=%t
@@ -16,7 +18,7 @@ set nobackup
 set copyindent
 set winaltkeys=no
 set autoindent  
-set shiftwidth=2
+set shiftwidth=2 tabstop=2 expandtab
 set softtabstop=2
 "set backspace=4
 set ruler  
@@ -185,6 +187,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 " vim-scripts repos
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
 Bundle 'L9'
@@ -297,6 +300,9 @@ let g:neocomplcache_enable_smart_case = 1
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
+let g:syntastic_quiet_messages = { "level": "warnings" }
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass'] }
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*
 filetype plugin on
 colorscheme Monokai
 syntax on

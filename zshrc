@@ -10,7 +10,6 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="powerline"
 ZSH_THEME="kolo"
 
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -33,7 +32,7 @@ ZSH_THEME="kolo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails3 ruby git)
+plugins=(rails ruby git)
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.bashrc
@@ -46,9 +45,13 @@ alias -g gvim='gvim -f'
 alias -g t='tmux'
 alias -g e='exit'
 alias redis='redis-server /etc/redis.conf'
+alias zr="zeus rspec spec/"
 #PS1="%n: %~%#"
 #PS1="%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%~%{$reset_color%} #"
 # Customize to your needs...
 unsetopt correct_all
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export EDITOR=vim
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
