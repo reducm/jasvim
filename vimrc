@@ -14,6 +14,9 @@ set history=50
 set autoread
 syntax enable
 set incsearch
+set hlsearch
+
+highlight Search guibg='yellow' guifg='none'
 set nobackup
 set copyindent
 set winaltkeys=no
@@ -23,7 +26,6 @@ set softtabstop=2
 "set backspace=4
 set ruler  
 set showcmd
-set incsearch
 set ignorecase 
 "在输入括号时光标会短暂地跳到与之相匹配的括号处，不影响输入  
 ""set cursorcolumn  " 高亮光标列
@@ -39,7 +41,6 @@ map \p <Esc>"*p<Enter>k$a
 map \y <Esc>"*y<Enter>
 vmap \y "+y<Enter>
 vmap <C-c> "+y<Enter>
-map <C-c> <Esc>
 map <F1> <Esc>:Gstatus<Enter>
 map \w <Esc>:w<Enter>
 map <C-s> <Esc>:w<Enter>
@@ -47,7 +48,7 @@ imap <C-s> <Esc>:w<Enter>a
 map <F2> <Esc>:Gcommit<Enter>
 imap <C-x><C-s> <Esc>:w<Enter>a
 imap <C-b> <Esc>i
-imap <C-c> <Esc>
+"imap <C-c> <Esc>
 imap <C-l> <Esc>zza
 imap <C-z> <Esc>ui
 imap <C-r> <Esc><C-r>i
@@ -115,7 +116,7 @@ if has("gui_macvim")
     set macmeta
     "let macvim_skip_cmd_opt_movement=1
     "let macvim_hig_shift_movement=1
-    vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+    "vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
     map \p :call setreg("\"",system("pbpaste"))<CR>p
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
     
@@ -158,7 +159,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'uggedal/go-vim'
+Bundle 'AndrewRadev/vim-eco'
 "代码补完
 Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
@@ -212,7 +213,7 @@ filetype plugin indent on     " required!
 "Bundle 'snipMate'
 
 """"""""""""""""""bundle end""""""""""""""""""""
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"  "ack用的 
+let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"  "ack用的 
 
 " F4和shift+F4调用FuzzyFinder命令行菜单"
 "
@@ -302,7 +303,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_mode_map = { 'passive_filetypes': ['sass'] }
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*,*.log
 filetype plugin on
 colorscheme Monokai
 syntax on
