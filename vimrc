@@ -163,6 +163,7 @@ Bundle 'AndrewRadev/vim-eco'
 "代码补完
 Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
+Bundle "plasticboy/vim-markdown"
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 "方便对齐 冒号啊，制作表格的情况
@@ -269,10 +270,10 @@ let g:user_zen_settings = {
 
 if has("gui_running")
 else
-  set t_Co=16
+  "set t_Co=16
 "设置shell下面的光标形状
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "让tmux也支持光标形状
   "if exists('$TMUX')
@@ -303,6 +304,10 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_mode_map = { 'passive_filetypes': ['sass'] }
+
+"vim-markdown
+let g:vim_markdown_folding_disabled=1
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*,*.log
 filetype plugin on
 colorscheme Monokai
