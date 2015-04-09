@@ -164,7 +164,7 @@ Bundle 'AndrewRadev/vim-eco'
 Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
 Bundle "plasticboy/vim-markdown"
-Bundle 'skammer/vim-css-color'
+"Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 "方便对齐 冒号啊，制作表格的情况
 Bundle 'godlygeek/tabular' 
@@ -304,6 +304,15 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_mode_map = { 'passive_filetypes': ['sass'] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "vim-markdown
 let g:vim_markdown_folding_disabled=1
