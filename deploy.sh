@@ -5,14 +5,19 @@ else
     echo "cant find the vundle! fetch it on github now!"
     git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
     rm -f $HOME/.vimrc
+    rm -f $HOME/.editorconfig
     ln -s $PWD/vimrc $HOME/.vimrc
+    ln -s $PWD/editorconfig $HOME/.editorconfig
     echo "already create symoble link to vimrc, you need to opren vim and run :BundleInstall first, then go back to run this shell again!"
     exit 1
 fi
 
 echo "create the vimrc softlink now..."
 rm -f $HOME/.vimrc
+rm -f $HOME/.editorconfig
 ln -s $PWD/vimrc $HOME/.vimrc
+ln -s $PWD/editorconfig $HOME/.editorconfig
+
 echo "create success! now copy the snippets to your $HOME/.vim"
 
 cp -rf $PWD/snippets $HOME/.vim/bundle/snipmate.vim/

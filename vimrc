@@ -149,10 +149,13 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-endwise'
 "方便添加删除两端 括号 标签之类的
 Bundle 'tpope/vim-surround'
+Bundle 'pbrisbin/vim-mkdir'
 "状态栏
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
@@ -160,6 +163,14 @@ Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'AndrewRadev/vim-eco'
+Bundle 'maksimr/vim-jsbeautify'
+"markdown即时预览，需要装nodejs, 
+"[sudo] npm -g install instant-markdown-d
+"Copy the after/ftplugin/markdown/instant-markdown.vim file from this repo
+"into your ~/.vim/after/ftplugin/markdown/ (creating directories as
+"necessary), or follow your vim package 
+"安装完后，md 文件 set ft=markdown后，打开localhost:8090就可以即时预览了
+Bundle 'suan/vim-instant-markdown'
 "代码补完
 Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
@@ -321,4 +332,5 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*,*.log
 filetype plugin on
 colorscheme Monokai
 syntax on
-
+set shell=bash\ -i
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
