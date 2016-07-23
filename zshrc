@@ -32,7 +32,7 @@ ZSH_THEME="kolo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails ruby git)
+plugins=(rails ruby git go)
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.bashrc
@@ -46,6 +46,7 @@ alias -g t='tmux'
 alias -g e='exit'
 alias redis='redis-server /etc/redis.conf'
 alias zr="zeus rspec spec/"
+alias sqlmap="python ~/railstest/sqlmap-dev/sqlmap.py"
 #PS1="%n: %~%#"
 #PS1="%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%~%{$reset_color%} #"
 # Customize to your needs...
@@ -55,3 +56,6 @@ export LC_ALL=en_US.UTF-8
 export EDITOR=vim
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export GVM_ROOT=/Users/jojo/.gvm
+. $GVM_ROOT/scripts/gvm-default
+export GOPATH=/Users/jojo/gotest

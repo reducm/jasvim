@@ -5,10 +5,12 @@ else
     echo "cant find the vundle! fetch it on github now!"
     git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
     rm -f $HOME/.vimrc
+    rm -f $HOME/.ideavimrc
     rm -f $HOME/.editorconfig
     ln -s $PWD/vimrc $HOME/.vimrc
+    ln -s $PWD/ideavimrc $HOME/.ideavimrc
     ln -s $PWD/editorconfig $HOME/.editorconfig
-    echo "already create symoble link to vimrc, you need to opren vim and run :BundleInstall first, then go back to run this shell again!"
+    echo "From JAS!!!: already create symoble link to vimrc, you need to opren vim and run :BundleInstall first, if you write go lang by vim like me, run :GoInstallBinaries, then go back to run this shell again!"
     exit 1
 fi
 
