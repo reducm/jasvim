@@ -23,3 +23,11 @@ ln -s $PWD/editorconfig $HOME/.editorconfig
 echo "create success! now copy the snippets to your $HOME/.vim"
 
 cp -rf $PWD/snippets $HOME/.vim/bundle/snipmate.vim/
+
+#YoucompleteMe
+#brew install cmake
+#C# support: install Mono with Homebrew or by downloading the Mono Mac package and add --omnisharp-completer when calling ./install.py.
+#Go support: install Go and add --gocode-completer when calling ./install.py.
+#TypeScript support: install Node.js and npm then install the TypeScript SDK with npm install -g typescript.
+#JavaScript support: install Node.js and npm and add --tern-completer when calling ./install.py.
+#Rust support: install Rust and add --racer-completer when calling ./install.py.

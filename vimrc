@@ -209,6 +209,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
 Bundle 'L9'
+Bundle "Valloric/YouCompleteMe"
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -321,16 +322,16 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
 
 let g:syntastic_quiet_messages = { "level": "warnings" }
-let g:syntastic_mode_map = { 'passive_filetypes': ['sass'] }
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'txt'] }
 
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 "vim-markdown
 let g:vim_markdown_folding_disabled=1
