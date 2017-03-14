@@ -16,7 +16,7 @@ syntax enable
 set incsearch
 set hlsearch
 
-highlight Search guibg='yellow' guifg='none'
+highlight Search guibg='yellow'
 set nobackup
 set copyindent
 set winaltkeys=no
@@ -172,7 +172,7 @@ Bundle 'maksimr/vim-jsbeautify'
 "into your ~/.vim/after/ftplugin/markdown/ (creating directories as
 "necessary), or follow your vim package 
 "安装完后，md 文件 set ft=markdown后，打开localhost:8090就可以即时预览了
-Bundle 'suan/vim-instant-markdown'
+"Bundle 'suan/vim-instant-markdown'
 "代码补完
 Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
@@ -210,6 +210,8 @@ Bundle 'FuzzyFinder'
 Bundle 'blackboard.vim'
 Bundle 'L9'
 Bundle "Valloric/YouCompleteMe"
+"elixir
+Bundle 'elixir-lang/vim-elixir'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -334,7 +336,7 @@ set statusline+=%*
 "let g:syntastic_check_on_wq = 0
 
 "vim-markdown
-let g:vim_markdown_folding_disabled=1
+"let g:vim_markdown_folding_disabled=1
 
 "syntaxcomplete
 if has("autocmd") && exists("+omnifunc") 
@@ -365,6 +367,19 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+"let g:ycm_path_to_python_interpreter = "/usr/bin/local/python"
 
 "let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
+
+let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = {
+  "\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  "\ 'file': '\v\.(exe|so|dll)$',
+  "\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+  "\ 
+"}
