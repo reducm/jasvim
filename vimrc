@@ -203,6 +203,7 @@ Bundle 'scrooloose/syntastic'
 " javascript模板
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+Bundle 'mxw/vim-jsx'
 Bundle "othree/javascript-libraries-syntax.vim"
 " vim-scripts repos
 Bundle 'mustache/vim-mustache-handlebars'
@@ -212,6 +213,16 @@ Bundle 'L9'
 Bundle "Valloric/YouCompleteMe"
 "elixir
 Bundle 'elixir-lang/vim-elixir'
+
+"VUE
+Bundle "posva/vim-vue"
+
+"TypeScript
+Bundle "leafgarland/typescript-vim"
+
+"highlight"
+Bundle 'jaxbot/semantic-highlight.vim'
+Bundle 'lfv89/vim-interestingwords'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -313,7 +324,10 @@ imap <leader>4 <><Esc>i
 imap <leader>5 =><Space><Esc>i
 imap <leader>s #{}<Esc>i
 imap <leader>6 <%%><Esc>hi
-imap <leader>f ()-><Esc>a
+imap <leader>f ()=><Esc>a
+imap <leader>c console.log()<Esc>i
+
+nnoremap <silent> <leader>L :call UncolorAllWords()<cr>
 
 "neocomplcache
 "let g:acp_enableAtStartup = 0
@@ -374,7 +388,7 @@ let g:go_fmt_autosave = 1
 
 let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore = {
@@ -383,3 +397,23 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
   "\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
   "\ 
 "}
+
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
