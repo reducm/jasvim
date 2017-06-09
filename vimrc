@@ -108,6 +108,7 @@ cnoremap <C-b> <Left>
 "let xml_syntax_folding=1      " XML
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
+autocmd BufNewFile,BufRead *.vue set filetype=html
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
 au! FileType scss syntax cluster sassCssAttributes add=@cssColors
 
@@ -215,7 +216,8 @@ Bundle "Valloric/YouCompleteMe"
 Bundle 'elixir-lang/vim-elixir'
 
 "VUE
-Bundle "posva/vim-vue"
+"Bundle "posva/vim-vue"
+Bundle "othree/html5.vim"
 
 "TypeScript
 Bundle "leafgarland/typescript-vim"
@@ -398,22 +400,4 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
   "\ 
 "}
 
-let g:ft = ''
-function! NERDCommenter_before()
-  if &ft == 'vue'
-    let g:ft = 'vue'
-    let stack = synstack(line('.'), col('.'))
-    if len(stack) > 0
-      let syn = synIDattr((stack)[0], 'name')
-      if len(syn) > 0
-        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
-      endif
-    endif
-  endif
-endfunction
-function! NERDCommenter_after()
-  if g:ft == 'vue'
-    setf vue
-    let g:ft = ''
-  endif
-endfunction
+
