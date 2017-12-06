@@ -74,7 +74,7 @@ map <f7> <esc>:IndentGuidesToggle<enter>
 nmap <F8> :TagbarToggle<CR>
 imap <F8> :TagbarToggle<CR>
 """"
-set fileencodings=utf-8,cp932
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 map <A-x> <Esc>:set filetype=
 map <S-F5> :source ~/.vimrc<Enter>
 "翻标签
@@ -132,6 +132,7 @@ if has("gui_macvim")
     inoremap <A-b> <Esc>bi
 else
     set guifont=Monospace\ 14
+    let g:Powerline_symbols = 'fancy'
     inoremap <M-b> <Esc>bi
     inoremap <A-b> <Esc>bi
 endif
@@ -149,24 +150,24 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-unimpaired'
+"Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-endwise'
 "方便添加删除两端 括号 标签之类的
 Bundle 'tpope/vim-surround'
-Bundle 'pbrisbin/vim-mkdir'
+"Bundle 'pbrisbin/vim-mkdir'
 "状态栏
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/SyntaxComplete'
-Bundle 'fatih/vim-go'
+"Bundle 'vim-scripts/SyntaxComplete'
+"Bundle 'fatih/vim-go'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'AndrewRadev/vim-eco'
-Bundle 'maksimr/vim-jsbeautify'
+"Bundle 'AndrewRadev/vim-eco'
+"Bundle 'maksimr/vim-jsbeautify'
 "markdown即时预览，需要装nodejs, 
 "[sudo] npm -g install instant-markdown-d
 "Copy the after/ftplugin/markdown/instant-markdown.vim file from this repo
@@ -175,7 +176,7 @@ Bundle 'maksimr/vim-jsbeautify'
 "安装完后，md 文件 set ft=markdown后，打开localhost:8090就可以即时预览了
 "Bundle 'suan/vim-instant-markdown'
 "代码补完
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
 Bundle "plasticboy/vim-markdown"
 "Bundle 'skammer/vim-css-color'
@@ -197,30 +198,30 @@ Bundle 'slim-template/vim-slim'
 "让vim光标正常的插件
 "Bundle 'sjl/vitality.vim'
 Bundle 'vim-scripts/ruby-matchit'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/mru.vim'
+"Bundle 'vim-scripts/matchit.zip'
+"Bundle 'vim-scripts/mru.vim'
 "代码检查
 Bundle 'scrooloose/syntastic'
 " javascript模板
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
-Bundle 'mxw/vim-jsx'
-Bundle "othree/javascript-libraries-syntax.vim"
+"Bundle 'pangloss/vim-javascript'
+"Bundle 'briancollins/vim-jst'
+"Bundle 'mxw/vim-jsx'
+"Bundle "othree/javascript-libraries-syntax.vim"
 " vim-scripts repos
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'FuzzyFinder'
-Bundle 'blackboard.vim'
+"Bundle 'mustache/vim-mustache-handlebars'
+"Bundle 'FuzzyFinder'
+"Bundle 'blackboard.vim'
 Bundle 'L9'
 Bundle "Valloric/YouCompleteMe"
 "elixir
-Bundle 'elixir-lang/vim-elixir'
+"Bundle 'elixir-lang/vim-elixir'
 
 "VUE
 "Bundle "posva/vim-vue"
-Bundle "othree/html5.vim"
+"Bundle "othree/html5.vim"
 
 "TypeScript
-Bundle "leafgarland/typescript-vim"
+"Bundle "leafgarland/typescript-vim"
 
 "highlight"
 Bundle 'jaxbot/semantic-highlight.vim'
@@ -268,8 +269,9 @@ let g:fuf_com_list=[':FufBuffer',':FufFile',':FufCoverageFile',':FufDir',
 	    \":FufDir \<C-r>=expand('%:p:~')[:-1-len(expand('%:p:~:t'))]\<CR>",
 	    \]       
 nnoremap <silent> <C-F4> :call fuf#givencmd#launch('', 0, '选择命令>', g:fuf_com_list)<CR>
-map <S-F4> <Esc>:FufFile<CR>
-map <F4> <Esc>:FufBuffer<CR>
+
+"map <S-F4> <Esc>:FufFile<CR>
+"map <F4> <Esc>:FufBuffer<CR>
 
 "cp ~/.vimrc ~/StudyNotes/vimrc.txt
 
@@ -317,7 +319,6 @@ else
   "endif
 endif
 
-let g:Powerline_symbols = 'fancy'
 let g:AutoPairsShortcutFastWrap='<C-g>'
 imap <leader>1 -><Esc>a
 imap <leader>2 =><Space><Esc>i
@@ -328,6 +329,7 @@ imap <leader>s #{}<Esc>i
 imap <leader>6 <%%><Esc>hi
 imap <leader>f ()=><Esc>a
 imap <leader>c console.log()<Esc>i
+nnoremap <Leader>v :SemanticHighlightToggle<cr>
 
 nnoremap <silent> <leader>L :call UncolorAllWords()<cr>
 
@@ -355,12 +357,12 @@ set statusline+=%*
 "let g:vim_markdown_folding_disabled=1
 
 "syntaxcomplete
-if has("autocmd") && exists("+omnifunc") 
-  autocmd Filetype * 
-        \ if &omnifunc == "" | 
-        \ setlocal omnifunc=syntaxcomplete#Complete | 
-        \ endif 
-endif 
+"if has("autocmd") && exists("+omnifunc") 
+  "autocmd Filetype * 
+        "\ if &omnifunc == "" | 
+        "\ setlocal omnifunc=syntaxcomplete#Complete | 
+        "\ endif 
+"endif 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*,*.log
 filetype plugin on
@@ -390,7 +392,12 @@ let g:go_fmt_autosave = 1
 
 let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
 
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
+
+autocmd FileType ruby setlocal et sta sw=2 sts=2
+autocmd FileType python setlocal et sta sw=4 sts=4
+
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore = {

@@ -59,4 +59,9 @@ export PATH=/usr/local/sbin:$PATH
 export GVM_ROOT=/Users/jojo/.gvm
 . $GVM_ROOT/scripts/gvm-default
 export GOPATH=/Users/jojo/gotest
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
