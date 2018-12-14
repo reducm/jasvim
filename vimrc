@@ -108,9 +108,11 @@ cnoremap <C-b> <Left>
 "let xml_syntax_folding=1      " XML
 
 autocmd BufNewFile,BufRead *.scss set filetype=sass
-autocmd BufNewFile,BufRead *.vue set filetype=html
+"autocmd BufNewFile,BufRead *.vue set filetype=html
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
 au! FileType scss syntax cluster sassCssAttributes add=@cssColors
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 if has("gui_macvim")
     set guifont=Monaco:h15
@@ -165,6 +167,7 @@ Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'msanders/snipmate.vim.git'
+"Bundle 'SirVer/ultisnips'
 Bundle 'kchmck/vim-coffee-script.git'
 "Bundle 'AndrewRadev/vim-eco'
 "Bundle 'maksimr/vim-jsbeautify'
@@ -178,7 +181,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 "代码补完
 "Bundle 'Shougo/neocomplcache'
 "Bundle 'tpope/vim-markdown'
-Bundle "plasticboy/vim-markdown"
+"Bundle "plasticboy/vim-markdown"
 "Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/nerdcommenter'
 "方便对齐 冒号啊，制作表格的情况
@@ -212,12 +215,12 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'FuzzyFinder'
 "Bundle 'blackboard.vim'
 Bundle 'L9'
-Bundle "Valloric/YouCompleteMe"
+"Bundle "Valloric/YouCompleteMe"
 "elixir
 "Bundle 'elixir-lang/vim-elixir'
 
 "VUE
-"Bundle "posva/vim-vue"
+Bundle "posva/vim-vue"
 "Bundle "othree/html5.vim"
 
 "TypeScript
@@ -385,12 +388,16 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-"let g:ycm_path_to_python_interpreter = "/usr/bin/local/python"
+"let g:ycm_path_to_python_interpreter = "~/.pyenv/shims/python"
+"let g:python_host_prog  = '~/.pyenv/shims/python'
+"let g:ycm_server_python_interpreter = "~/.pyenv/shims/python"
 
 "let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 
 let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
+
+let g:vue_disable_pre_processors=1
 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
@@ -406,5 +413,3 @@ autocmd FileType python setlocal et sta sw=4 sts=4
   "\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
   "\ 
 "}
-
-
