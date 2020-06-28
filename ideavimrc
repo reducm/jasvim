@@ -97,4 +97,4 @@ cnoremap <C-b> <Left>
 " ...
 set surround
 filetype plugin indent on     " required!
-
+nmap <leader><leader>w :action AceAction<CR>
