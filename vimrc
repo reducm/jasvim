@@ -107,11 +107,11 @@ cnoremap <C-b> <Left>
 "let vimsyn_folding='af'       " Vim script
 "let xml_syntax_folding=1      " XML
 
-autocmd BufNewFile,BufRead *.scss set filetype=sass
+"autocmd BufNewFile,BufRead *.scss set filetype=sass
 "autocmd BufNewFile,BufRead *.vue set filetype=html
 "au BufRead,BufNewFile *.s{c,a}ss set filetype=css
-au! FileType scss syntax cluster sassCssAttributes add=@cssColors
-autocmd FileType vue syntax sync fromstart
+"au! FileType scss syntax cluster sassCssAttributes add=@cssColors
+"autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 if has("gui_macvim")
@@ -134,7 +134,7 @@ if has("gui_macvim")
     inoremap <A-b> <Esc>bi
 else
     set guifont=Monospace\ 14
-    let g:Powerline_symbols = 'fancy'
+    "let g:Powerline_symbols = 'fancy'
     inoremap <M-b> <Esc>bi
     inoremap <A-b> <Esc>bi
 endif
@@ -158,7 +158,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 "Bundle 'pbrisbin/vim-mkdir'
 "状态栏
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-ruby/vim-ruby'
 "Bundle 'vim-scripts/SyntaxComplete'
 "Bundle 'fatih/vim-go'
@@ -185,7 +185,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'scrooloose/nerdcommenter'
 "方便对齐 冒号啊，制作表格的情况
 Bundle 'godlygeek/tabular' 
-Bundle 'flazz/vim-colorschemes'
+"Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
 "提示代码calss method之类的
 Bundle 'majutsushi/tagbar'
@@ -439,6 +439,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
