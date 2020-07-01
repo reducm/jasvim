@@ -24,11 +24,6 @@ echo "create success! now copy the snippets to your $HOME/.vim"
 
 cp -rf $PWD/snippets $HOME/.vim/bundle/snipmate.vim/
 
-echo "setting python-mode!"
-git clone https://github.com/python-mode/python-mode.git $HOME/.vim/python-mode
-cd $HOME/.vim/python-mode
-cp -R * $HOME/.vim/
-
 echo "remember to rebuild helptags in vim ( :helptags ~/.vim/doc/ )"
 
 #YoucompleteMe

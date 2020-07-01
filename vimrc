@@ -249,7 +249,7 @@ filetype plugin indent on     " required!
 "Bundle 'snipMate'
 
 """"""""""""""""""bundle end""""""""""""""""""""
-let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"  "ack用的 
+"let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"  "ack用的 
 
 " F4和shift+F4调用FuzzyFinder命令行菜单"
 "
@@ -340,7 +340,7 @@ nnoremap <silent> <leader>L :call UncolorAllWords()<cr>
 "let g:neocomplcache_enable_at_startup = 1
 "let g:neocomplcache_enable_smart_case = 1
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+"let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:user_emmet_leader_key = '<c-l>'
 
 let g:syntastic_quiet_messages = { "level": "warnings" }
