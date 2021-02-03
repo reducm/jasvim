@@ -4,9 +4,15 @@ show-separator: true
 interval: 5 
 watchlist:
   - 0700.HK
+  - TSLA
+  - AAPL
+  - GOOG
+  - MSFT
+  - AMZN
   - 002475.SZ
   - 1810.HK
   - BTC-USD
+  - ETH-USD
   - DOGE-USD
   - VIPS
   - 3690.HK
@@ -17,15 +23,30 @@ watchlist:
   - SHOP
   - GME  
   - TSM
-  - 600519
+  - 600519.SS
+  - 002352.SZ
+  - 000333.SZ
+  - ZM
+  - NIO
+  - XPEV
+  - LI
+  - HUYA
+  - ABNB
+  - CRM
+  - KO
+  - BABA
+  - JD
+  - NTES
+  - 9618.HK
+  - 0710.HK
+  - 9999.HK
+  - BIDUN.MX
 
-#lots:
-  #- symbol: "ABNB"
-    #quantity: 35.0
-    #unit_cost: 146.00
-  #- symbol: "ARKW"
-    #quantity: 20.0
-    #unit_cost: 152.25
-  #- symbol: "ARKW"
-    #quantity: 20.0
-    #unit_cost: 145.35
+lots:
+  - symbol: "600031.SS"
+    quantity: 100.0
+    unit_cost: 41.151
+  - symbol: "BILI"
+    quantity: 2.0
+    unit_cost: 120.4
+  
