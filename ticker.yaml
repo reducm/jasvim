@@ -1,0 +1,31 @@
+show-tags: true
+show-fundamentals: true
+show-separator: true
+interval: 5 
+watchlist:
+  - 0700.HK
+  - 002475.SZ
+  - 1810.HK
+  - BTC-USD
+  - DOGE-USD
+  - VIPS
+  - 3690.HK
+  - 000987.SZ
+  - 600031.SS
+  - TME
+  - BILI
+  - SHOP
+  - GME  
+  - TSM
+  - 600519
+
+#lots:
+  #- symbol: "ABNB"
+    #quantity: 35.0
+    #unit_cost: 146.00
+  #- symbol: "ARKW"
+    #quantity: 20.0
+    #unit_cost: 152.25
+  #- symbol: "ARKW"
+    #quantity: 20.0
+    #unit_cost: 145.35
