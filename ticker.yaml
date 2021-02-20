@@ -14,6 +14,7 @@ watchlist:
   - BTC-USD
   - ETH-USD
   - DOGE-USD
+  - BNB-USD
   - VIPS
   - 3690.HK #美团
   - 000987.SZ #越秀
@@ -58,12 +59,28 @@ lots:
     quantity: 100.0
     unit_cost: 52.1
   - symbol: "BILI"
-    quantity: 2.0
-    unit_cost: 120.4
+    quantity: 4.0
+    unit_cost: 133.59
   #- symbol: "DOGE-USD"
     #quantity: 2927.15
     #unit_cost: 0.074025
-  - symbol: "TME"
-    quantity: 2.0
-    unit_cost: 27.15
+  #- symbol: "TME"
+    #quantity: 2.0
+    #unit_cost: 27.15
+  - symbol: "ABNB"
+    quantity: 1.0
+    unit_cost: 206.39
+  - symbol: "AAPL"
+    quantity: 1.0
+    unit_cost: 136.43
+  - symbol: "SNDL"
+    quantity: 22.0
+    unit_cost: 4.2855
+  - symbol: "TSM"
+    quantity: 1
+    unit_cost: 133.72
+  - symbol: "NIO"
+    quantity: 1
+    unit_cost: 60.97
+
 
