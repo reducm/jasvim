@@ -441,6 +441,8 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'HerringtonDarkholme/yats.vim'
 
 
 " You can specify revision/branch/tag.
