@@ -47,6 +47,7 @@ watchlist:
   - 0710.HK #京东方
   - 9999.HK #网易
   - BIDUN.MX
+  - BIDU
   - PDD
   - ARKW
   - ARKR
@@ -54,6 +55,8 @@ watchlist:
   - ARKF
   - ARKQ
   - ARKK
+  - NFLX #netflix
+  - DIS #迪士尼
 
 lots:
   - symbol: "600031.SS"
@@ -72,11 +75,11 @@ lots:
     #quantity: 2.0
     #unit_cost: 27.15
   - symbol: "ABNB"
-    quantity: 1.0
-    unit_cost: 206.39
+    quantity: 2.0
+    unit_cost: 203.195
   - symbol: "AAPL"
-    quantity: 1.0
-    unit_cost: 136.43
+    quantity: 2.0
+    unit_cost: 129.815
   - symbol: "SNDL"
     quantity: 22.0
     unit_cost: 4.2855
@@ -86,5 +89,14 @@ lots:
   - symbol: "NIO"
     quantity: 1
     unit_cost: 60.97
+  - symbol: "NFLX"
+    quantity: 1
+    unit_cost: 547.81
+  - symbol: "BIDU"
+    quantity: 1
+    unit_cost: 296.00
+  - symbol: "DIS"
+    quantity: 1
+    unit_cost: 194.50
 
 
