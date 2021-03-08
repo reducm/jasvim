@@ -98,5 +98,8 @@ lots:
   - symbol: "DIS"
     quantity: 1
     unit_cost: 194.50
+  - symbol: "002352.SZ"
+    quantity: 100
+    unit_cost: 95.5
 
 
