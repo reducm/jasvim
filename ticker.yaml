@@ -66,8 +66,8 @@ lots:
     quantity: 100.0
     unit_cost: 52.1
   - symbol: "BILI"
-    quantity: 4.0
-    unit_cost: 133.59
+    quantity: 8.0
+    unit_cost: 120.645
   #- symbol: "DOGE-USD"
     #quantity: 2927.15
     #unit_cost: 0.074025
@@ -75,8 +75,8 @@ lots:
     #quantity: 2.0
     #unit_cost: 27.15
   - symbol: "ABNB"
-    quantity: 2.0
-    unit_cost: 203.195
+    quantity: 3.0
+    unit_cost: 196.13
   - symbol: "AAPL"
     quantity: 2.0
     unit_cost: 129.815
@@ -93,7 +93,7 @@ lots:
     quantity: 1
     unit_cost: 547.81
   - symbol: "BIDU"
-    quantity: 1
+    quantity: 2
     unit_cost: 296.00
   - symbol: "DIS"
     quantity: 1
