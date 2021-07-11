@@ -185,7 +185,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'scrooloose/nerdcommenter'
 "方便对齐 冒号啊，制作表格的情况
 Bundle 'godlygeek/tabular' 
-"Bundle 'flazz/vim-colorschemes'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'mileszs/ack.vim'
 "提示代码calss method之类的
 Bundle 'majutsushi/tagbar'
