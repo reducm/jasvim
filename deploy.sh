@@ -14,6 +14,15 @@ else
     exit 1
 fi
 
+if [ -d "$HOME/.vim/bundle/neobundle.vim" ];then
+    echo "the NeoBundle exist!"
+  else
+    echo "cant find the NeoBundle! fetch it on github now!"
+    curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+    sh ./install.sh
+    exit 1
+fi
+
 echo "create the vimrc softlink now..."
 rm -f $HOME/.vimrc
 rm -f $HOME/.editorconfig
