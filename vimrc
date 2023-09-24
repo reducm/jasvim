@@ -1,3 +1,5 @@
+set visualbell
+set noerrorbells
 autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! BufReadPost Gemfile set ft=ruby
 au BufRead,BufNewFile *.rabl set filetype=ruby
@@ -398,6 +400,8 @@ let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
 
 let g:vue_disable_pre_processors=1
 
+let g:markdown_enable_spell_checking = 0
+
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
 
@@ -443,6 +447,7 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'HerringtonDarkholme/yats.vim'
+NeoBundle 'gabrielelana/vim-markdown'
 
 
 " You can specify revision/branch/tag.
